@@ -49,6 +49,11 @@ Default Gateway: 10.0.2.2
 ```
 
 This showed that the VM was connected through the VirtualBox NAT network.
+### Network Evidence
+
+![Ubuntu network connectivity](images/01-ubuntu-network-connectivity.png)
+
+![Network routing and ping](images/02-network-routing-and-ping.png)
 
 ## Connectivity Testing
 
@@ -81,6 +86,8 @@ sudo ss -tulpn
 ```
 
 This demonstrated how a security analyst can correlate listening network ports with the processes responsible for them.
+
+![Linux listening ports](images/05-linux-listening-ports.png)
 
 ## Service Investigation
 
@@ -115,6 +122,8 @@ Status: inactive
 
 This meant that UFW was installed but was not actively filtering traffic.
 
+![UFW firewall inactive](images/03-ufw-firewall-inactive.png)
+
 ## Firewall Hardening
 
 I enabled UFW using:
@@ -137,6 +146,8 @@ Default: deny (incoming), allow (outgoing), disabled (routed)
 ```
 
 This established a stronger security baseline by denying unsolicited inbound connections while allowing normal outbound traffic.
+
+![UFW firewall enabled](images/04-ufw-firewall-enabled.png)
 
 ## Security Findings
 
